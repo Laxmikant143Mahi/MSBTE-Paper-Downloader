@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MSBTE Help</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+  </head>
+  <body>
+    <marquee id="marquee" class="marquee">Hello Welcome to my Project</marquee>
+<br><br><br>
+    <div class="form-container">
+      <form id="userForm" onsubmit="return validateForm()" method="post" action="/submit-form">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="mobile">Mobile Number:</label>
+          <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required />
+        </div>
+        <div class="form-group">
+          <label for="college">College Name:</label>
+          <input type="text" id="college" name="college" required />
+        </div>
+        <div class="form-group">
+          <label for="place">Place:</label>
+          <input type="text" id="place" name="place" required />
+        </div>
+        <button type="submit" name="btn" id="btn">Next</button>
+      </form>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

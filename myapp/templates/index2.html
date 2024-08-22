@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>MSBTE Paper Hunter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style2.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>MSBTE Paper Hunter</h1>
+<br>
+      <form id="paperForm" onsubmit="return validateForm();" method="post" action="/download-paper">
+        <div class="form-group">
+          <label for="paperType">Select Paper Type:</label>
+          <select id="paperType" name="paperType" required>
+            <option value="">--Select Paper Type--</option>
+            <option value="question">Question Paper</option>
+            <option value="answer">Answer Paper</option>
+          </select>
+        </div>
+<br><Br>
+        <div class="form-group">
+          <label for="subjectCode">Subject Code:</label>
+          <input
+            type="text"
+            id="subjectCode"
+            name="subjectCode"
+            minlength="5"
+		maxlength="5"
+            
+            required
+          />
+        </div>
+<br><Br>
+        <div class="form-group">
+          <label for="year">Select Year:</label>
+          <select id="year" name="year" required>
+            <option value="">--Select Year--</option>
+            <option value="QPS22">Summer 2022 (QPS22)</option>
+            <option value="QPW19">Winter 2019 (QPW19)</option>
+            <option value="QPS19">Summer 2019 (QPS19)</option>
+            <option value="QPW18">Winter 2018 (QPW18)</option>
+            <option value="QPS18">Summer 2018 (QPS18)</option>
+            <option value="QPW17">Winter 2017 (QPW17)</option>
+            <option value="QPS17">Summer 2017 (QPS17)</option>
+          </select>
+        </div>
+<br><br><br>
+   	<CENTER>    <button type="submit" name="btn" id="btn">Submit</button> </CENTER>
+      </form>
+    </div>
+    <script>
+	function validateForm(){
+	if (isValid) {
+  return true
+}
+
+}
+</script>
+  </body>
+</html>
